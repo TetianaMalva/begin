@@ -6,6 +6,19 @@ package com.tanya.test;
  */
 public class Program1 {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        String message = buildMessage();
+        System.out.println(message);
+    }
+
+    static String buildMessage(){
+        return "My name is " + getFirstName() + " " + getLastName();
+    }
+
+    private static String getFirstName() {
+        return "Tetiana";
+    }
+
+    private static String getLastName() {
+        return "Malva";
     }
 }
