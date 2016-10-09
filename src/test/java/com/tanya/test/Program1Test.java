@@ -36,18 +36,12 @@ public class Program1Test {
                             sortedArray[i], i, sortedArray[i + 1], i + 1));
         }
 
-        int sumOfMyArray = getSumOfArray(myArray);
-        int sumOfSortedArray = getSumOfArray(sortedArray);
+        int sumOfMyArray = Utils.getSumOfArray(myArray);
+        int sumOfSortedArray = Utils.getSumOfArray(sortedArray);
         Assert.assertEquals(sumOfMyArray, sumOfSortedArray,
                 String.format("Sum of elements in array should be same. My %s. Sorted %s",
                         sumOfMyArray, sumOfSortedArray));
     }
 
-    private int getSumOfArray(int[] array) {
-        int sum = 0;
-        for (int anArray : array) {
-            sum += anArray;
-        }
-        return sum;
-    }
+
 }
