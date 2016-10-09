@@ -21,4 +21,8 @@ public class Program1 {
     private static String getLastName() {
         return "Malva";
     }
+
+    public static int[] sortArray(int[] myArray) {
+        return new int[8];
+    }
 }

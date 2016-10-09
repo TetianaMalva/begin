@@ -21,7 +21,30 @@ public class Program1Test {
     }
 
     @Test
-    public void mySecondTest(){
+    public void bubbleSortTest() {
+        int[] myArray = {8, 3, 10, 444, 3, 1, -1, 4};
+        int[] sortedArray = Program1.sortArray(myArray);
 
+        Assert.assertEquals(sortedArray.length, myArray.length);
+
+        for (int i = 0; i < sortedArray.length - 2; i++) {
+            Assert.assertTrue(sortedArray[i] <= sortedArray[i + 1],
+                    String.format("Element [%s] '%s' should be less or equal than element [%s] '%s'",
+                            sortedArray[i], i, sortedArray[i + 1], i + 1));
+        }
+
+        int sumOfMyArray = getSumOfArray(myArray);
+        int sumOfSortedArray = getSumOfArray(sortedArray);
+        Assert.assertEquals(sumOfMyArray, sumOfSortedArray,
+                String.format("Sum of elements in array should be same. My %s. Sorted %s",
+                        sumOfMyArray, sumOfSortedArray));
+    }
+
+    private int getSumOfArray(int[] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        return sum;
     }
 }
