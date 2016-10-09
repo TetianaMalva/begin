@@ -1,5 +1,7 @@
 package com.tanya.test;
 
+import java.util.Arrays;
+
 /**
  * This is my first Java program <br><br/>
  * Created by tanya on 10/9/16.
@@ -22,7 +24,9 @@ public class Program1 {
         return "Malva";
     }
 
-    public static int[] sortArray(int[] myArray) {
-        return new int[8];
+    static int[] sortArray(int[] myArray) {
+        Arrays.sort(myArray);
+
+        return myArray;
     }
 }

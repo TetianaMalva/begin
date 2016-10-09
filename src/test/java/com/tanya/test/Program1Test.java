@@ -23,7 +23,10 @@ public class Program1Test {
     @Test
     public void bubbleSortTest() {
         int[] myArray = {8, 3, 10, 444, 3, 1, -1, 4};
+
+        //1
         int[] sortedArray = Program1.sortArray(myArray);
+        //2
 
         Assert.assertEquals(sortedArray.length, myArray.length);
 
@@ -42,8 +45,8 @@ public class Program1Test {
 
     private int getSumOfArray(int[] array) {
         int sum = 0;
-        for (int i = 0; i < array.length; i++) {
-            sum += array[i];
+        for (int anArray : array) {
+            sum += anArray;
         }
         return sum;
     }
